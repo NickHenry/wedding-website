@@ -103,7 +103,7 @@ class RsvpForm extends Component {
     const { classes } = this.props;
     return (
       <div className={classes.paper}>
-        <form className={classes.form} noValidate onSubmit={this.submit}>
+        <form className={classes.form} noValidate onSubmit={this.submit} data-netlify="true">
           <FormControl component="fieldset" className={classes.formControl}>
             <FormLabel component="legend">Are you coming?</FormLabel>
             <RadioGroup
