@@ -16,15 +16,8 @@ import image13 from "./images/13.jpg";
 export const theme = createMuiTheme({
   spacing: 4,
   palette: {
-    primary: {
-      light: '#757ce8',
-      main: '#3f50b5',
-      dark: '#002884',
-      contrastText: '#fff',
-    },
-    text: {
-      main: "#404040",
-    }
+    primary: "#5bb086",
+    text: "#404040"
   }
 });
 
