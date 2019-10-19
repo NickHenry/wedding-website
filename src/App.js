@@ -1,5 +1,11 @@
 import React, { Component } from "react";
-import { CssBaseline, Paper, Grid, Typography } from "@material-ui/core";
+import {
+  CssBaseline,
+  Paper,
+  Grid,
+  Typography,
+  Container
+} from "@material-ui/core";
 
 import RsvpForm from "./components/RsvpForm";
 import Slideshow from "./components/Slideshow";
@@ -11,16 +17,21 @@ const styles = theme => ({
     height: "100vh"
   },
   paper: {
-    margin: 2,
     display: "flex",
     flexDirection: "column",
     alignItems: "center"
+  },
+  container: {
+    paddingTop: theme && theme.spacing,
+    paddingBottom: theme.spacing
   }
 });
+
 
 class App extends Component {
   render() {
     const { classes } = this.props;
+    console.log(theme);
     return (
       <ThemeProvider theme={theme}>
         <Grid container component="main" className={classes.root}>
@@ -37,25 +48,29 @@ class App extends Component {
             elevation={6}
             square
           >
-            <Typography variant="h4" align="center" color="primary">
-              Welcome
-            </Typography>
+            <Container className={classes.container}>
+              <Typography variant="h4" align="center" color="primary">
+                Welcome
+              </Typography>
+              <Typography variant="body1" align="center">
+                Welcome info on the wedding - date - time - location
+              </Typography>
+            </Container>
+            <Container className={classes.container}>
+              <Typography variant="body1" align="center">
+                Please RSVP and all that below
+              </Typography>
+              <RsvpForm />
+            </Container>
+            <Container className={classes.container}>
+              <Typography variant="h5" component="h5" align="center">
+                More Details
+              </Typography>
 
-            <Typography variant="body1" align="center">
-              Welcome info on the wedding - date - time - location
-            </Typography>
-            <Typography variant="body1" align="center">
-              Please RSVP and all that below
-            </Typography>
-            <RsvpForm />
-
-            <Typography variant="h5" component="h5" align="center">
-              More Details
-            </Typography>
-
-            <Typography variant="body1" component="div" align="center">
-              No presents, wishing well and all that jazz
-            </Typography>
+              <Typography variant="body1" component="div" align="center">
+                No presents, wishing well and all that jazz
+              </Typography>
+            </Container>
           </Grid>
         </Grid>
       </ThemeProvider>
