@@ -31,7 +31,6 @@ const styles = theme => ({
 class App extends Component {
   render() {
     const { classes } = this.props;
-    console.log(theme);
     return (
       <ThemeProvider theme={theme}>
         <Grid container component="main" className={classes.root}>
