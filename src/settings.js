@@ -1,6 +1,6 @@
 import { createMuiTheme } from "@material-ui/core/styles";
-import image1 from "./images/1.png";
-import image2 from "./images/2.jpg";
+import image1 from "./images/image1.png";
+import image2 from "./images/image2.jpg";
 export const theme = createMuiTheme({
   spacing: 4,
   palette: {

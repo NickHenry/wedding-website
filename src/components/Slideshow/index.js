@@ -31,6 +31,7 @@ function Slideshow() {
         index={activeStep}
         onChangeIndex={handleStepChange}
         className={classes.img}
+        interval={4000}
         enableMouseEvents
       >
         {images.map((step, index) => (
